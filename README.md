@@ -9,3 +9,7 @@
 - "Enchanted to meet you"
 - Take a quiz and get a list of orgs to look at in tinder format
   - can message or email officers of org with questions
+  - can see org social medias
+  - Can see compatibility before swiping
+- Swiping left takes orgs out of the list
+- Only swipe rights are added to final lists
