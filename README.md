@@ -7,4 +7,5 @@
 ## Features to include
 - Fairy sparkles for loading
 - "Enchanted to meet you"
-- Bumble but for clubs/organizations
+- Take a quiz and get a list of orgs to look at in tinder format
+  - can message or email officers of org with questions
