@@ -10,8 +10,7 @@ cd my-app
 npm start
 ```
 
-If this does not work, it is likely that npm is not properly installed on your device. You can try reinstalling it by doing:
-
+If this does not work, it is likely that npm or create-react-app are not properly installed on your device. You can try uninstalling and reinstalling them.
 
 ## Inspiration
 We were inspired to build this project around the idea of bringing a little magic to students while they navigate their lives in academia. As freshman in engineering, it can be difficult to make new friends with similar interests. People always tell you to join clubs, but it can be overwhelming to look at so many options at once. We hoped to create a simple alternative that gives students instant match-making results, similar to dating apps like Tinder and Bumble, but for organizations!
