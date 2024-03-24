@@ -52,7 +52,7 @@
   
   .box {
     padding: 10px 40px; /* Adjust the size of buttons */
-    font-family: 'Trebuchet MS';
+    font-family: 'Gill Sans MT', sans-serif;
     font-size: 16px; /* Adjust the text size in the button */
     background-color: #576138; /* Button background color */
     color: white; /* Button text color */

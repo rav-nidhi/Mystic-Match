@@ -1,8 +1,9 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 import logo from './pics-vids/logo.svg';
 import vid from './pics-vids/gate-vid.mp4'
-import './App.css';
 import "./style.css";
+import Login from './components/Login'
 
 function App() {
   return (
@@ -12,7 +13,6 @@ function App() {
         autoPlay
         loop
         muted
-        //poster="https://assets.codepen.io/6093409/river.jpg"
       >
         <source
           src={vid}
@@ -23,7 +23,7 @@ function App() {
       <main>
         <button class="box">Swipe</button>
         <button class="box">Quiz</button>
-        <button class="box">SignUp</button>
+        <button class="box">Sign Up</button>
         <button class="box">Login</button>
       </main>
     </div>
