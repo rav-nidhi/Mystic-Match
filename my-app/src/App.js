@@ -3,6 +3,8 @@ import logo from './pics-vids/logo.svg';
 import vid from './pics-vids/gate-vid.mp4'
 import "./style.css";
 import Login from './components/Login'
+import Swipe from './components/swipe'
+import Read from './components/Read'
 
 function App() {
   return (
@@ -21,7 +23,7 @@ function App() {
       <h1>Mystic Match</h1>
       <h2>ENCHANTED TO MEET YOU</h2>
       <main>
-        <button class="box">Swipe</button>
+        <button class="box"><Swipe>Swipe</Swipe></button>
         <button class="box">Quiz</button>
         <button class="box">Sign Up</button>
         <button class="box">Login</button>
