@@ -1,20 +1,34 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 const Swipe = () => {
     const [index, setIndex] = useState(0);
     const [selectedOrgs, setSelectedOrgs] = useState([]);
-    const orgs = [
-        { name: "Org A", description: "Description A" },
-        { name: "Org B", description: "Description B" },
-        { name: "Org C", description: "Description C" }
-    ];
+    const [orgs, setOrgs] = useState([]);
+
+    useEffect(() => {
+        const fetchData = async () => {
+            try {
+                const response = await fetch('./orgs.csv');
+                const text = await response.text();
+                const orgData = text.split('\n').map(row => {
+                    const [id, name, topics] = row.split(',');
+                    return { id, name, topics };
+                });
+                setOrgs(orgData);
+            } catch (error) {
+                console.error("Error fetching CSV.", error);
+            }
+        };
+
+        fetchData();
+    }, []);
 
     const swipeLeft = () => {
         setIndex(index + 1);
     };
 
     const swipeRight = (org) => {
-        setSelectedOrgs([...selectedOrgs, org]);
+        setSelectedOrgs([selectedOrgs, org]);
         setIndex(index + 1);
     };
 
@@ -24,8 +38,8 @@ const Swipe = () => {
                 <div>
                     <button onClick={swipeLeft}>Swipe Left ❌</button>
                     <div>
-                        <h3>#{orgs[index].name}</h3>
-                        <p>{orgs[index].description}</p>
+                        <h3>{orgs[index].name}</h3>
+                        <p>{orgs[index].id}</p>
                     </div>
                     <button onClick={() => swipeRight(orgs[index])}>Swipe Right ✔️</button>
                 </div>

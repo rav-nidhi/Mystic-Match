@@ -1,10 +1,9 @@
 import React from 'react'
-import logo from './pics-vids/logo.svg';
+// import logo from './pics-vids/logo.svg';
 import vid from './pics-vids/gate-vid.mp4'
 import "./style.css";
-import Login from './components/Login'
+// import Login from './components/Login'
 import Swipe from './components/swipe'
-import Read from './components/Read'
 
 function App() {
   return (
