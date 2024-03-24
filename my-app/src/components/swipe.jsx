@@ -1,27 +1,24 @@
 import React, { useState, useEffect } from 'react';
-import "./styles.css"
-const Swipe = () => {
+import "./styles.css";
 
+const Swipe = () => {
     const [counter, setIndex] = useState(0);
     const [selectedOrgs, setSelectedOrgs] = useState([]);
-    const [orgs, setOrgs] = useState([]);
+    const [orgs, setOrgs] = useState([
+        { name: 'Out in STEM', topics: 'Engineering' },
+        { name: 'Artificial Intelligence Society', topics: 'Artificial Intelligence' },
+        { name: 'Combat Robotics', topics: 'Engineering' },
+        { name: 'Computer Security Group', topics: 'Cybersecurity' },
+        { name: 'Cybersecurity Club', topics: 'Cybersecurity' },
+        { name: 'Developer Student Club', topics: 'Computer Science' },
+        { name: 'Girls Who Code', topics: 'Computer Science' },
+        { name: 'Institute of Electrical and Electronics Engineers', topics: 'Electrical' },
+        { name: 'National Society of Black Engineers', topics: 'POC' },
+        { name: 'Society of Asian Scientists and Engineers', topics: 'POC' },
+        { name: 'Society of Women Engineers', topics: 'Women' },
+        { name: 'Women Who Compute', topics: 'Women' }
+    ]);
 
-    useEffect(() => {
-    const fetchData = async () => {
-        try {
-            const response = await fetch('./orgs.csv');
-            const text = await response.text();
-            const orgData = text.split('\n').map(row => {
-                const [id, name, topics] = row.split(',');
-                return { id, name, topics };
-            });
-            setOrgs(orgData);
-        } catch (error) {
-            console.error("Error fetching CSV.", error);
-        }
-    };
-
-    fetchData();}, []);
 
 const swipeLeft = () => {
     setIndex(counter + 1);
@@ -43,7 +40,7 @@ return (
         </div>
         <div className="org-info">
           <h3>{orgs[counter].name}</h3>
-          <p>{orgs[counter].id}</p>
+          <p>{orgs[counter].topics}</p>
         </div>
       </div>
     ) : (
