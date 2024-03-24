@@ -32,10 +32,11 @@ function App() {
     </video>
     <h1>Mystic Match</h1>
     <h2>ENCHANTED TO MEET YOU</h2>
+
     <main>
-    <button class="box" onClick={(e) => {e.preventDefault(); window.location.href='./Home';}}> Home</button>
-    <button class="box" onClick={(e) => {e.preventDefault(); window.location.href='./Quiz';}}> Quiz</button>
-    <button class="box" onClick={(e) => {e.preventDefault(); window.location.href='./Swipe';}}> Swipe</button>
+        <button class="box" onClick={(e) => {e.preventDefault(); window.location.href='./Home';}}> Home</button>
+        <button class="box" onClick={(e) => {e.preventDefault(); window.location.href='./Quiz';}}> Quiz</button>
+        <button class="box" onClick={(e) => {e.preventDefault(); window.location.href='./Swipe';}}> Swipe</button>
     </main>
   </div>
                 <Routes>

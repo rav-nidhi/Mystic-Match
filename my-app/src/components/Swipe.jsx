@@ -31,7 +31,7 @@ const swipeRight = (org) => {
 
 return (
   <div className='page'>
-    <h1>Swipe Match</h1>
+    <h3>Swipe Match</h3>
     {counter < orgs.length ? (
       <div>
         <div className="swipe-buttons">
