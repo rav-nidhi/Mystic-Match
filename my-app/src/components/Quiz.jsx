@@ -32,7 +32,7 @@ const MyForm = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        // Add your logic for form submission here
+        // Add logic for form submission here
         console.log('Form submitted:', formData);
     };
 
@@ -68,7 +68,7 @@ const MyForm = () => {
                     </label>
                 </div>
                 <div>
-                <button class="subBox" type="submit" style={{ marginTop: '20px', marginBottom: '20px'}}>Submit</button></div>
+                <button class="box" onClick={(e) => {e.preventDefault(); window.location.href='./Swipe';}}> Submit</button></div>
             </form>
         </div>
     );

@@ -59,15 +59,5 @@ return (
     </div>
 )
 };
- 
-//const Swipe = () => {
- //  return (
-     //   <div>
-      //      <h1>Swipe Page</h1>
-      //  </div>
-   // );
-//};
-
-//>>>>>>> b676b7c803ab66839e21c414946a34a89138f698
 
 export default Swipe;

@@ -68,6 +68,15 @@
     background-color: #829254; /* Lighter purple on hover */
   }
   
+  .page{
+    height: 100vh;
+    width: 100vw;
+    background-color: #829254;
+    object-fit: cover;
+    position: fixed;
+    top: 0;
+  }
+
   @media (max-width: 750px) {
     #background-video {
       display: none;

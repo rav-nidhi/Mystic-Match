@@ -1,51 +1,57 @@
-import React from 'react'
-// import logo from './pics-vids/logo.svg';
-import vid from './pics-vids/gate-vid.mp4'
-import "./style.css";
-// import Login from './components/Login'
-import Swipe from './components/swipe'
+import vid from "./pics-vids/gate-vid.mp4"
+import "./style.css"
+
+import {
+    BrowserRouter as Router,
+    Routes,
+    Route,
+    Navigate,
+} from "react-router-dom";
+
+import Home from "./components/Home";
+import Quiz from "./components/Quiz";
+import Swipe from "./components/Swipe";
 
 function App() {
-  return (
-    <div className="App">
-      <video
-        id="background-video"
-        autoPlay
-        loop
-        muted
-      >
-        <source
-          src={vid}
-          type="video/mp4"
-        />
-      </video>
-      <h1>Mystic Match</h1>
-      <h2>ENCHANTED TO MEET YOU</h2>
-      <main>
-        <button class="box"><Swipe>Swipe</Swipe></button>
-        <button class="box">Quiz</button>
-        <button class="box">Sign Up</button>
-        <button class="box">Login</button>
-      </main>
-    </div>
+    return (
+        <>
+            {/* This is the alias of BrowserRouter i.e. Router */}
+            <Router>
 
-    // <div className="App">
-    //   <header className="App-header">
-    //     <img src={logo} className="App-logo" alt="logo" />
-    //     <p>
-    //       Edit <code>src/pics-vids/App.js</code> and save to reload.
-    //     </p>
-    //     <a
-    //       className="App-link"
-    //       href="https://reactjs.org"
-    //       target="_blank"
-    //       rel="noopener noreferrer"
-    //     >
-    //       Learn React
-    //     </a>
-    //   </header>
-    // </div>
-  );
+            <div className="HomePage">
+    <video
+      id="background-video"
+      autoPlay
+      loop
+      muted
+    >
+      <source
+        src={vid}
+        type="video/mp4"
+      />
+    </video>
+    <h1>Mystic Match</h1>
+    <h2>ENCHANTED TO MEET YOU</h2>
+    <main>
+    <button class="box" onClick={(e) => {e.preventDefault(); window.location.href='./Home';}}> Home</button>
+    <button class="box" onClick={(e) => {e.preventDefault(); window.location.href='./Quiz';}}> Quiz</button>
+    <button class="box" onClick={(e) => {e.preventDefault(); window.location.href='./Swipe';}}> Swipe</button>
+    </main>
+  </div>
+                <Routes>
+                    <Route
+                        exactpath="/"element={<Home />}/>
+                    <Route
+                        path="/quiz" element={<Quiz />}/>
+                    <Route
+                        path="/swipe" element={<Swipe />}/>
+                    <Route
+                        path="*"
+                        element={<Navigate to="/" />}/>
+                </Routes>
+            </Router>
+        </>
+    );
 }
 
 export default App;
