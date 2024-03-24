@@ -25,7 +25,7 @@ const swipeLeft = () => {
 };
 
 const swipeRight = (org) => {
-    setSelectedOrgs([selectedOrgs, org]);
+    setSelectedOrgs([...selectedOrgs, org]);
     setIndex(counter + 1);
 };
 
