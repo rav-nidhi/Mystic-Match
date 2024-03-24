@@ -1,6 +1,6 @@
 # Mystic Match!
 
-## How to run it
+## How to Run it
 In order to run this webiste on a localhost, you must have Node.js, including npm (node package manager), and the Mystic-Match.zip file. Then, extract the file, and use the following commands from your terminal of choice to boot up the localhost:
 
 ```
