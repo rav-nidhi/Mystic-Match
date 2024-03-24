@@ -1,5 +1,18 @@
 # Mystic Match!
 
+## How to run it
+In order to run this webiste on a localhost, you must have Node.js, including npm (node package manager), and the Mystic-Match.zip file. Then, extract the file, and use the following commands from your terminal of choice to boot up the localhost:
+
+```
+npm install -g create-react-app
+npm install react-router-dom
+cd my-app
+npm start
+```
+
+If this does not work, it is likely that npm is not properly installed on your device. You can try reinstalling it by doing:
+
+
 ## Inspiration
 We were inspired to build this project around the idea of bringing a little magic to students while they navigate their lives in academia. As freshman in engineering, it can be difficult to make new friends with similar interests. People always tell you to join clubs, but it can be overwhelming to look at so many options at once. We hoped to create a simple alternative that gives students instant match-making results, similar to dating apps like Tinder and Bumble, but for organizations!
 
