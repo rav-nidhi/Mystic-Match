@@ -1,0 +1,78 @@
+.App {
+    font-family: sans-serif;
+    text-align: center;
+  }
+  /* video background */
+  #background-video {
+    height: 100vh;
+    width: 100vw;
+    object-fit: cover;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: -1;
+  }
+  
+  /* page content */
+  h1,
+  h2 {
+    color: #4B586C;
+    font-family: Unicorn;
+    text-align: center;
+  }
+  
+  h1 {
+    font-size: 5rem;
+    margin-top: 10vh;
+    color: #4B586C;
+  }
+  
+  /* unused atm */
+  h2 {
+    font-size: 3rem;
+  }
+  
+  main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start; /* Adjust as needed: start, center, space-around, space-between */ 
+    gap: 20px; /* Adjust the gap size as needed */ 
+    width: 100%; /* Adjust width as needed */
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    gap: 20px; /* Adjust the space between buttons */
+  }
+  
+  .box {
+    padding: 10px 40px; /* Adjust the size of buttons */
+    font-family: 'Trebuchet MS';
+    font-size: 16px; /* Adjust the text size in the button */
+    background-color: #576138; /* Button background color */
+    color: white; /* Button text color */
+    border: none; /* Removes the default border */
+    cursor: pointer; /* Changes cursor to pointer on hover */
+    transition: background-color 0.3s; /* Smooth transition for background color */
+    border-radius: 5px; /* Optional: rounds the corners of the button */
+    font-size: 30px; /* Optional: adjusts the font size of the text in the button */
+  }
+  
+  .box:hover {
+    background-color: #829254; /* Lighter purple on hover */
+  }
+  
+  @media (max-width: 750px) {
+    #background-video {
+      display: none;
+    }
+    body {
+      background: url("https://assets.codepen.io/6093409/river.jpg") no-repeat;
+      background-size: cover;
+    }
+  }
