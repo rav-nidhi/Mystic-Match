@@ -1,0 +1,46 @@
+h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.swipe-buttons {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.swipe-buttons button {
+  font-size: 18px;
+  padding: 10px 20px;
+  margin: 0 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  border: none;
+}
+
+.swipe-buttons button.left {
+  background-color: #FF5252;
+  color: white;
+}
+
+.swipe-buttons button.right {
+  background-color: #4CAF50; 
+  color: white;
+}
+
+.org-info {
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.org-info h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.org-info p {
+  font-size: 16px;
+  color: #555;
+}

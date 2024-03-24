@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
- 
+import "./styles.css"
 const Swipe = () => {
 
     const [counter, setIndex] = useState(0);
@@ -33,31 +33,33 @@ const swipeRight = (org) => {
 };
 
 return (
-    <div class='page'>
-        <h1>Swipe Match</h1>
-        {counter < orgs.length ? (
-            <div>
-                <button onClick={swipeLeft}>Swipe Left ❌</button>
-                <div>
-                    <h3>{orgs[counter].name}</h3>
-                    <p>{orgs[counter].id}</p>
-                </div>
-                <button onClick={() => swipeRight(orgs[counter])}>Swipe Right ✔️</button>
-            </div>
-        ) : (
-            <p>No more organizations left to show.</p>
-        )}
+  <div className='page'>
+    <h1>Swipe Match</h1>
+    {counter < orgs.length ? (
+      <div>
+        <div className="swipe-buttons">
+          <button className="left" onClick={swipeLeft}>Swipe Left ❌</button>
+          <button className="right" onClick={() => swipeRight(orgs[counter])}>Swipe Right ✔️</button>
+        </div>
+        <div className="org-info">
+          <h3>{orgs[counter].name}</h3>
+          <p>{orgs[counter].id}</p>
+        </div>
+      </div>
+    ) : (
+      <p>No more organizations left to show.</p>
+    )}
 
-        {selectedOrgs.length > 0 && (
-            <div>
-                <h4>Selected Organizations:</h4>
-                {selectedOrgs.map((org, counter) => (
-                    <p key={counter}>{org.name}</p>
-                ))}
-            </div>
-        )}
-    </div>
-)
+    {selectedOrgs.length > 0 && (
+      <div>
+        <h4>Selected Organizations:</h4>
+        {selectedOrgs.map((org, index) => (
+          <p key={index}>{org.name}</p>
+        ))}
+      </div>
+    )}
+  </div>
+);
 };
 
 export default Swipe;
