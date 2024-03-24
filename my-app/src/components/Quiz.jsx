@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import "./QuizStyle.css";
 import {
     BrowserRouter as Router,
     Routes,
@@ -40,12 +41,12 @@ const MyForm = () => {
         <div className="page">
             <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column' }}>
                 <h1 style={{ marginBottom:'1vh'}}>Org Match Quiz</h1>
-                <label>
+                <div className= "my-form"><div><label>
                     Name:
                     <input type="text" name="name" value={formData.name} onChange={handleChange} />
-                </label>
+                </label></div>
                 <label>Check all topics below that interest you:</label>
-                <div>
+                <div className= "my-form">
                     <label>
                         <input type="checkbox" name="topics" value='Engineering' checked={formData.topics.includes('Engineering')} onChange={handleChange} />
                         Engineering
@@ -69,6 +70,7 @@ const MyForm = () => {
                 </div>
                 <div>
                 <button class="box" onClick={(e) => {e.preventDefault(); window.location.href='./Swipe';}}> Submit</button></div>
+                </div>
             </form>
         </div>
     );

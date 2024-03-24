@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import "./styles.css";
+import "./swipeStyle.css";
 
 const Swipe = () => {
     const [counter, setIndex] = useState(0);
