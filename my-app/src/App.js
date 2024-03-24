@@ -1,5 +1,4 @@
 import React from 'react'
-import { Link } from 'react-router-dom';
 import logo from './pics-vids/logo.svg';
 import vid from './pics-vids/gate-vid.mp4'
 import "./style.css";
@@ -19,7 +18,8 @@ function App() {
           type="video/mp4"
         />
       </video>
-      <h1>ENCHANTED TO MEET YOU</h1>
+      <h1>Mystic Match</h1>
+      <h2>ENCHANTED TO MEET YOU</h2>
       <main>
         <button class="box">Swipe</button>
         <button class="box">Quiz</button>

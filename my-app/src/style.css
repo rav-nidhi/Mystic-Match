@@ -19,18 +19,19 @@
   h1,
   h2 {
     color: #4B586C;
-    font-family: Unicorn;
     text-align: center;
+    margin:0;
   }
   
   h1 {
+    font-family: Unicorn;
     font-size: 5rem;
-    margin-top: 10vh;
+    margin-top: 7vh;
     color: #4B586C;
   }
   
-  /* unused atm */
   h2 {
+    font-family: 'Gill Sans MT', sans-serif;
     font-size: 3rem;
   }
   
@@ -43,7 +44,7 @@
     width: 100%; /* Adjust width as needed */
 
     position: absolute;
-    top: 50%;
+    top: 60%;
     left: 50%;
     transform: translate(-50%, -50%);
     display: flex;
