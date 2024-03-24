@@ -40,7 +40,7 @@ const MyForm = () => {
     return (
         <div className="page">
             <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column' }}>
-                <h1 style={{ marginBottom:'1vh'}}>Org Match Quiz</h1>
+                <h1 className="title">Org Match Quiz</h1>
                 <div className= "my-form"><div><label>
                     Name:
                     <input type="text" name="name" value={formData.name} onChange={handleChange} />
